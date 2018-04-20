@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.5"
+  - "3.5-dev"
+  - "3.6"
+  - "3.6-dev"
+  - "3.7-dev"
+  - "pypy3.5"
+
+addons:
+  apt:
+    packages:
+    - doxygen
+
+script:
+  - python -m unittest discover -s test

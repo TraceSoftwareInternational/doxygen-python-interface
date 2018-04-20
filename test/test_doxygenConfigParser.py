@@ -10,6 +10,7 @@ class DoxygenConfigParserTest(unittest.TestCase):
 
     def __init__(self, *args, **kwargs):
         super(DoxygenConfigParserTest, self).__init__(*args, **kwargs)
+        logging.disable(logging.CRITICAL)
         self.doxyfile_original = os.path.join(os.path.dirname(__file__), "assets/Doxyfile")
         self.doxyfile_working = "./Doxyfile.tmp"
 
@@ -52,5 +53,4 @@ class DoxygenConfigParserTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    logging.disable(logging.CRITICAL)
     unittest.main()

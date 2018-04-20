@@ -12,6 +12,7 @@ class DoxygenGeneratorTest(unittest.TestCase):
 
     def __init__(self, *args, **kwargs):
         super(DoxygenGeneratorTest, self).__init__(*args, **kwargs)
+        logging.disable(logging.CRITICAL)
         self.doxyfile_original = os.path.join(os.path.dirname(__file__), "assets/Doxyfile")
         self.path_to_clean = []
 
@@ -47,5 +48,4 @@ class DoxygenGeneratorTest(unittest.TestCase):
         self.assertTrue(os.path.isfile(output_zip_archive))
 
 if __name__ == '__main__':
-    logging.disable(logging.CRITICAL)
     unittest.main()
