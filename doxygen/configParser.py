@@ -91,7 +91,7 @@ class ConfigParser:
             logging.error("Impossible to extract first value off multi line option from: {}" % line)
             raise ParseException("Impossible to extract first value off multi line option from: {}" % line)
 
-        return matches[1], self.__remove_double_quote_if_required(matches[2])
+        return matches.group(1), self.__remove_double_quote_if_required(matches.group(2))
 
     def __extract_single_line_option_name_and_value(self, line) -> (str, str):
         """
@@ -107,7 +107,7 @@ class ConfigParser:
             logging.error("Impossible to extract option name and value from: {}" % line)
             raise ParseException("Impossible to extract option name and value from: {}" % line)
 
-        return matches[1], self.__remove_double_quote_if_required(matches[2])
+        return matches.group(1), self.__remove_double_quote_if_required(matches.group(2))
 
     def __is_single_line_option(self, line: str) -> bool:
         return self.__single_line_option_regex.match(line) is not None

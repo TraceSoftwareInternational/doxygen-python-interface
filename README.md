@@ -1,5 +1,7 @@
 # doxygen-python-interface
 
+[![Build Status](https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface.svg?branch=master)](https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface)
+
 This library provide a way to update [Doxygen](http://www.stack.nl/~dimitri/doxygen/) configuration and launch a build of documentation
 
 ## Example
@@ -24,7 +26,7 @@ configuration['BRIEF_MEMBER_DESC'] = 'NO'
 config_parser.store_configuration(configuration, my_doxyfile_path)
 
 # 4. Build the doc and generate a zip
-doxy_builder =Generator(my_doxyfile_path)
+doxy_builder = Generator(my_doxyfile_path)
 output_zip_archive = doxy_builder.build(clean=True, generate_zip=True)
 
 ```
