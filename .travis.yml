@@ -13,4 +13,12 @@ addons:
     - doxygen
 
 script:
-  - python -m unittest discover -s test
+  - python -m unittest discover -s tests
+
+deploy:
+  provider: pypi
+  user: "TraceSoftwareInternational"
+  password:
+    secure: "IZJxxBhoTvoFDQ5QJN9VMpV4iRLxvzbjbLbqgz2CQcKWdvVJilMRx58mXH+FocOPEX4ogVcqy6S4VasCuVWERAfFxKh+4ODoqI/KOaml8H2eEa1XM8QufDM91vpSDMUdfcBqofkhHyZKp2Jt1IBg20VIFWQlxlWCEXG/Uk5wqeA+9qxYLo4bdii2ATOqE+LKv9HFUC8a6uGs0HccgIcIyn1kLdcVaLRJxxhZHbtov+dlQCK329iXN9X+QirOmYq8l/WBNhTgb9okFulUJ0Hob+AN9WkyZnyDnJY7TW8tLXh8x72UnaPcaMUe1weyIEUV9uI+6RvBXu7FJDvINr44KXVWABqvddv1CL34BaaBGfteO/5voHGPT4nrtnd7NSrk2B5HQPtRyiicjuv5GBgYrX4IfRE2Z4xxY09PA+qn6AIBCKcR1SOTB5f7+0Sj6dybAQwhH1Cngc6q/Qdd0DFc+/YFe3bxU8V/Cm2eZBXZwjIs6OaNpVLnelRBbY3TP5BeX8D+6dmZrTLAAoLjoJVXsdtw28s0xsZimGyxCnX3x/InrGJ4RQSRSf//MZa06Q0C9Ut/9EYO/W5Q090Z4cdd+HypH0wZN3R2A6k1pQ54iQSpJtF2zvg9Cmu5K4LZbJDewu0F6pvWgkazY8kOrvj6KjtoFOeazOaRANsYo1XmYa0="
+  on:
+    tags: true
