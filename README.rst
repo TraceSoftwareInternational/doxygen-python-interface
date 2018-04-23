@@ -1,7 +1,7 @@
 doxygen-python-interface
 ========================
 
-|Build Status|
+|Build Status| |PyPI Last Version|
 
 This library provide a way to update `Doxygen`_ configuration and launch
 a build of documentation
@@ -37,4 +37,7 @@ Example
 .. _Doxygen: http://www.stack.nl/~dimitri/doxygen/
 
 .. |Build Status| image:: https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface.svg?branch=master
-   :target: https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface
+    :target: https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface
+
+.. |PyPI Last Version| image:: https://badge.fury.io/py/doxygen-interface.svg
+    :target: https://badge.fury.io/py/doxygen-interface
