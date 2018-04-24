@@ -16,6 +16,7 @@ class ConfigParser:
     def load_configuration(self, doxyfile: str) -> dict:
         """
         Parse a Doxygen configuration file
+
         :param doxyfile: Path to the Doxygen configuration file
         :return: A dict with all doxygen configuration
         :raise FileNotFoundError: When doxyfile doesn't exist
@@ -60,6 +61,7 @@ class ConfigParser:
     def store_configuration(self, config: dict, doxyfile: str):
         """
         Store the doxygen configuration to the disk
+
         :param config: The doxygen configuration you want to write on disk
         :param doxyfile: The output path where configuration will be written. If the file exist, it will be truncated
         """
@@ -81,6 +83,7 @@ class ConfigParser:
     def __extract_multiline_option_name_and_first_value(self, line) -> (str, str):
         """
         Extract the option name and the first value of multi line option
+
         :param line: The line you want to parse
         :return: the option name and the option first value
         :raise ParseException: When process fail to extract data
@@ -95,11 +98,12 @@ class ConfigParser:
 
     def __extract_single_line_option_name_and_value(self, line) -> (str, str):
         """
-       Extract the option name and the value of single line option
-       :param line: The line you want to parse
-       :return: the option name and the option value
-       :raise ParseException: When process fail to extract data
-       """
+        Extract the option name and the value of single line option
+
+        :param line: The line you want to parse
+        :return: the option name and the option value
+        :raise ParseException: When process fail to extract data
+        """
 
         matches = self.__single_line_option_regex.search(line)
 
@@ -122,6 +126,7 @@ class ConfigParser:
     def __remove_double_quote_if_required(option_value: str) -> str:
         """
         Remove the double quote around string in option value.
+
         Will be replaced when rewrite the configuration
         :param option_value: The value you want to work on
         :return: The option value proper
@@ -137,6 +142,7 @@ class ConfigParser:
     def __add_double_quote_if_required(option_value: str) -> str:
         """
         Add the double quote around string in option value if its required
+
         :param option_value: The value you want to work on
         :return: The option value proper
         """
