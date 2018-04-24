@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
+
 import subprocess
 import os.path
 import shutil
 import logging
 
 from distutils.spawn import find_executable
-from doxygen.configParser import ConfigParser
+from doxygen import ConfigParser
 
 
 class Generator:
@@ -16,6 +17,7 @@ class Generator:
 
     def __init__(self, doxyfile, doxygen_path=None):
         """
+
         :param doxyfile: Path to the doxygen configuration file.
         :param doxygen_path: Path to the doxygen executable if doxygen is not in your path
         :raise FileNotFoundError: If the doxygen executable of the configuration file cannot be reached
@@ -41,6 +43,7 @@ class Generator:
     def build(self, generate_zip=False, clean=True):
         """
         Build the documentation according to the configuration
+
         :param generate_zip: If set, will zip the generated documentation
         :param clean: If true, will delete the output folder of the documentation before build and after zip generation if executed. Be careful if you set output path to non empty folder
         :return: The path to the output documentation. Path to the zip archive if you generate the archive. None in case of failure
@@ -89,6 +92,7 @@ class Generator:
     def __build_doc(self):
         """
         Build the documentation
+
         :return: True if success else False
         """
 
@@ -111,6 +115,7 @@ class Generator:
     def __compress_doc(self, doc_folder: str, output_zip_path: str):
         """
         Compress the previously generated doc
+
         :param doc_folder: Folder which will be compressed
         :param output_zip_path: Path where archive will be created
         :return: True if success else False

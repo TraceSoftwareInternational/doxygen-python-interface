@@ -26,7 +26,7 @@ setup(
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version=environ.get("TRAVIS_TAG", "0.0.1"),  # Required
+    version=environ.get("TRAVIS_TAG", "0.0.0"),  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
@@ -53,7 +53,7 @@ setup(
     # This should be your name or the name of the organization which owns the
     # project.
     author='Trace Software International',  # Optional
-    author_email='dducatel@trace-software.com',
+    author_email='open-source@trace-software.com',
 
     python_requires='>=3.5',
 

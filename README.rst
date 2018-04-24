@@ -1,7 +1,7 @@
 doxygen-python-interface
 ========================
 
-|Build Status| |PyPI Last Version|
+|BuildStatus| |PyPILastVersion| |License|
 
 This library provide a way to update `Doxygen`_ configuration and launch
 a build of documentation
@@ -12,8 +12,8 @@ Example
 .. code:: python
 
 
-    from doxygen.configParser import ConfigParser
-    from doxygen.generator import Generator
+    from doxygen import ConfigParser
+    from doxygen import Generator
 
 
     my_doxyfile_path = "path/to/my/Doxyfile"
@@ -36,8 +36,11 @@ Example
 
 .. _Doxygen: http://www.stack.nl/~dimitri/doxygen/
 
-.. |Build Status| image:: https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface.svg?branch=master
+.. |BuildStatus| image:: https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface.svg?branch=master
     :target: https://travis-ci.org/TraceSoftwareInternational/doxygen-python-interface
 
-.. |PyPI Last Version| image:: https://badge.fury.io/py/doxygen-interface.svg
+.. |PyPILastVersion| image:: https://badge.fury.io/py/doxygen-interface.svg
     :target: https://badge.fury.io/py/doxygen-interface
+
+.. |License| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
+    :target: http://www.gnu.org/licenses/gpl-3.0

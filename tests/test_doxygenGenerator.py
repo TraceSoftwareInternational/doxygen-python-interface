@@ -5,7 +5,7 @@ import os
 
 import shutil
 
-from doxygen.generator import Generator
+from doxygen import Generator
 
 
 class DoxygenGeneratorTest(unittest.TestCase):

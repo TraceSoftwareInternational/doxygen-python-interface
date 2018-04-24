@@ -3,7 +3,7 @@ import unittest
 
 import os
 
-from doxygen.configParser import ConfigParser
+from doxygen import ConfigParser
 
 
 class DoxygenConfigParserTest(unittest.TestCase):
