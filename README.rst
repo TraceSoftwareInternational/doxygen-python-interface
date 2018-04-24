@@ -1,7 +1,7 @@
 doxygen-python-interface
 ========================
 
-|BuildStatus| |PyPILastVersion| |License|
+|BuildStatus| |PyPILastVersion| |License| |Docs|
 
 This library provide a way to update `Doxygen`_ configuration and launch
 a build of documentation
@@ -44,3 +44,6 @@ Example
 
 .. |License| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
     :target: http://www.gnu.org/licenses/gpl-3.0
+
+.. |Docs| image:: https://img.shields.io/badge/Docs-HostMyDocs-green.svg
+    :target: https://docs.trace-software.com
