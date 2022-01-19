@@ -11,7 +11,7 @@ class ConfigParser:
 
     def __init__(self):
         self.__single_line_option_regex = re.compile("^\s*(\w+)\s*=\s*([^\\\\]*)\s*$")
-        self.__first_line_of_multine_option_regex = re.compile("^\s*(\w+)\s*=\s*(.*)\\\\$")
+        self.__first_line_of_multine_option_regex = re.compile("^\s*(\w+)\s*=\s*(|.*[^\s])\s*\\\\$")
 
     def load_configuration(self, doxyfile: str) -> dict:
         """
@@ -45,7 +45,8 @@ class ConfigParser:
                     if not line.endswith('\\'):
                         in_multiline_option = False
                     option_value = line.rstrip('\\').strip()
-                    configuration[current_multiline_option_name].append(option_value)
+                    unquoted_option_value = self.__remove_double_quote_if_required(option_value)
+                    configuration[current_multiline_option_name].append(unquoted_option_value)
 
                 elif self.__is_first_line_of_multiline_option(line):
                     current_multiline_option_name, option_value = self.__extract_multiline_option_name_and_first_value(line)
