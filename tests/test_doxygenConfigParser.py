@@ -73,6 +73,15 @@ class DoxygenConfigParserTest(unittest.TestCase):
 
         self.assertEqual(['line1', 'line2', 'line3'], configuration['MULTILINE_OPTION'])
 
+    def test_quoted_multiline_option(self):
+        configuration = self.get_configuration_from_lines([
+            'MULTILINE_OPTION = "line 1" \\',
+            '                   "line 2" \\',
+            '                   "line 3"',
+        ])
+
+        self.assertEqual(['line 1', 'line 2', 'line 3'], configuration['MULTILINE_OPTION'])
+
     def get_configuration_from_lines(self, lines: List[str]) -> dict:
         """Writes lines into a Doxyfile and reads it. This will also write and load the configuration again to check if
         the config_parser changes it
