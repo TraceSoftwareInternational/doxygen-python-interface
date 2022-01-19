@@ -11,7 +11,7 @@ class ConfigParser:
 
     def __init__(self):
         self.__single_line_option_regex = re.compile("^\s*(\w+)\s*=\s*([^\\\\]*)\s*$")
-        self.__first_line_of_multine_option_regex = re.compile("^\s*(\w+)\s*=\s*(.*)\\\\$")
+        self.__first_line_of_multine_option_regex = re.compile("^\s*(\w+)\s*=\s*(|.*[^\s])\s*\\\\$")
 
     def load_configuration(self, doxyfile: str) -> dict:
         """
